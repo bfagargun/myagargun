@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prof. Dr. Mehmet Yücel Ağargün — Ruh Sağlığı ve Hastalıkları</title>
+<meta name="description" content="Prof. Dr. Mehmet Yücel Ağargün'ün akademik profili, uyku ve klinik hipnoz alanındaki çalışmaları ve ruh sağlığı üzerine hasta bilgilendirmesi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#211D2E;
+    --ink-soft:#4B4459;
+    --paper:#F3F1F5;
+    --paper-raised:#EAE5EF;
+    --gold:#B9852E;
+    --gold-soft:#D6AD68;
+    --plum:#5B3A5C;
+    --line:#DAD3E1;
+    --serif:'Spectral', Georgia, serif;
+    --sans:'IBM Plex Sans', -apple-system, sans-serif;
+    --mono:'IBM Plex Mono', monospace;
+    --measure:66ch;
+  }
+
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *{ animation-duration:0.001ms !important; transition-duration:0.001ms !important; }
+  }
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:16px;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{ color:var(--gold); text-decoration-thickness:1px; text-underline-offset:3px; }
+  a:hover{ color:var(--ink); }
+  a:focus-visible, button:focus-visible{ outline:2px solid var(--gold); outline-offset:3px; }
+
+  h1,h2,h3{ font-family:var(--serif); font-weight:500; margin:0; color:var(--ink); }
+
+  .wrap{ max-width:820px; margin:0 auto; padding:0 2rem; }
+
+  /* ---------- Masthead ---------- */
+  header.masthead{
+    position:sticky; top:0; z-index:10;
+    background:rgba(243,241,245,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .masthead-inner{
+    max-width:820px; margin:0 auto; padding:1.1rem 2rem;
+    display:flex; align-items:center; justify-content:space-between;
+    gap:1rem; flex-wrap:wrap;
+  }
+  .masthead-name{ font-family:var(--serif); font-size:1.05rem; color:var(--ink); text-decoration:none; }
+  .masthead-name:hover{ color:var(--ink); }
+  nav.masthead-nav{ display:flex; gap:1.4rem; flex-wrap:wrap; }
+  nav.masthead-nav a{
+    color:var(--ink-soft); text-decoration:none; font-size:0.88rem;
+    border-bottom:2px solid transparent; padding-bottom:0.2rem;
+    transition:color .2s ease, border-color .2s ease;
+  }
+  nav.masthead-nav a:hover, nav.masthead-nav a.active{ color:var(--ink); border-color:var(--gold); }
+
+  /* ---------- Hero ---------- */
+  .hero{ padding:4rem 0 3rem 0; }
+  .hero-illustration{ width:100%; max-width:440px; height:auto; margin-bottom:2.2rem; display:block; }
+  .hero-illustration path{
+    fill:none; stroke:var(--gold-soft); stroke-width:1.6;
+    stroke-linecap:round; stroke-linejoin:round;
+    stroke-dasharray:1200; stroke-dashoffset:1200;
+    animation:draw 2.6s ease forwards 0.15s;
+  }
+  .hero-illustration circle{ fill:var(--gold); opacity:0; animation:fadein .6s ease forwards 2.3s; }
+  @keyframes draw{ to{ stroke-dashoffset:0; } }
+  @keyframes fadein{ to{ opacity:1; } }
+
+  .eyebrow{ font-family:var(--mono); font-size:0.8rem; color:var(--gold); margin-bottom:0.9rem; }
+  .hero h1{ font-size:2.5rem; line-height:1.2; max-width:16ch; margin-bottom:1.2rem; }
+  .hero .tagline{ font-size:1.05rem; max-width:52ch; color:var(--ink-soft); margin:0 0 1.1rem 0; }
+
+  .audience-select{ display:flex; flex-wrap:wrap; gap:0.9rem; margin:1.8rem 0 1.6rem 0; }
+  .audience-link{
+    font-size:0.92rem; text-decoration:none; color:var(--ink);
+    padding:0.6rem 1rem; border:1px solid var(--line);
+    transition:color .2s ease, border-color .2s ease;
+  }
+  .audience-link.academic{ border-left:3px solid var(--gold); }
+  .audience-link.academic:hover{ color:var(--gold); border-color:var(--gold); }
+  .audience-link.patient{ border-left:3px solid var(--plum); }
+  .audience-link.patient:hover{ color:var(--plum); border-color:var(--plum); }
+
+  .credentials{
+    font-family:var(--mono); font-size:0.8rem; color:var(--ink-soft);
+    display:flex; flex-wrap:wrap; gap:0.4rem 1.3rem;
+  }
+
+  /* ---------- Sections ---------- */
+  section{ padding:4rem 0; border-top:1px solid var(--line); }
+  section:first-of-type{ border-top:none; }
+  h2{ font-size:1.7rem; margin-bottom:1.5rem; max-width:22ch; }
+  p{ max-width:var(--measure); margin:0 0 1.1rem 0; color:var(--ink-soft); }
+  p:last-child{ margin-bottom:0; }
+
+  .note{
+    font-size:0.85rem; color:var(--ink-soft); border-left:2px solid var(--gold);
+    padding:0.2rem 0 0.2rem 1rem; max-width:var(--measure); margin-top:1.3rem;
+  }
+
+  /* ---------- Timeline ---------- */
+  .timeline{ list-style:none; margin:0; padding:0; max-width:var(--measure); }
+  .timeline li{
+    display:grid; grid-template-columns:7rem 1fr; gap:1.2rem;
+    padding:1.1rem 0; border-top:1px solid var(--line);
+  }
+  .timeline li:first-child{ border-top:none; }
+  .timeline .year{ font-family:var(--mono); font-size:0.85rem; color:var(--gold); padding-top:0.15rem; }
+  .timeline .desc strong{ display:block; color:var(--ink); font-weight:600; margin-bottom:0.15rem; }
+  .timeline .desc span{ color:var(--ink-soft); font-size:0.95rem; }
+
+  /* ---------- Focus areas ---------- */
+  .areas{ list-style:none; margin:0; padding:0; max-width:var(--measure); columns:2; column-gap:2rem; }
+  .areas li{ break-inside:avoid; padding:0.7rem 0; font-size:0.97rem; color:var(--ink-soft); border-top:1px solid var(--line); }
+  .areas li:nth-child(1),.areas li:nth-child(2){ border-top:none; }
+  .areas li strong{ color:var(--ink); font-weight:500; }
+
+  @media (max-width:600px){ .areas{ columns:1; } }
+
+  /* ---------- Publications ---------- */
+  .pub-stats{
+    display:flex; flex-wrap:wrap; gap:2.2rem;
+    margin:0 0 2.4rem 0; padding:1.3rem 0;
+    border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+  }
+  .pub-stats .stat{ display:flex; flex-direction:column; }
+  .pub-stats .stat strong{ font-family:var(--serif); font-size:1.7rem; color:var(--gold); line-height:1; }
+  .pub-stats .stat span{ font-size:0.82rem; color:var(--ink-soft); margin-top:0.3rem; }
+
+  .pub-block{ max-width:var(--measure); margin-bottom:2.2rem; }
+  .pub-block:last-child{ margin-bottom:0; }
+  .pub-block h3{ font-size:1.05rem; font-weight:600; margin-bottom:0.6rem; color:var(--ink); }
+
+  .pub-list{ list-style:none; margin:0; padding:0; counter-reset:pubs; }
+  .pub-list li{
+    counter-increment:pubs;
+    padding:0.9rem 0 0.9rem 2.1rem;
+    border-top:1px solid var(--line);
+    font-size:0.93rem;
+    color:var(--ink-soft);
+    position:relative;
+  }
+  .pub-list li:first-child{ border-top:none; }
+  .pub-list li::before{
+    content:"[" counter(pubs) "]";
+    position:absolute; left:0; top:0.9rem;
+    font-family:var(--mono); color:var(--gold); font-size:0.8rem;
+  }
+  .pub-list .journal{ color:var(--ink); font-weight:500; }
+  .pub-list em{ font-style:italic; }
+
+  .roles{ display:flex; flex-wrap:wrap; gap:0.6rem; }
+  .roles span{
+    font-size:0.83rem; font-family:var(--mono); color:var(--plum);
+    border:1px solid var(--line); padding:0.35rem 0.7rem;
+  }
+
+  /* ---------- Patient section ---------- */
+  .patient-guide{ list-style:none; margin:0 0 1.6rem 0; padding:0; max-width:var(--measure); }
+  .patient-guide li{ padding:1.4rem 0; border-top:1px solid var(--line); }
+  .patient-guide li:first-child{ border-top:none; }
+  .patient-guide h3{ font-size:1.1rem; margin-bottom:0.4rem; color:var(--plum); }
+  .patient-guide p{ font-size:0.95rem; margin:0; }
+
+  .disclaimer{
+    max-width:var(--measure); font-size:0.85rem; color:var(--ink-soft);
+    border-left:2px solid var(--plum); padding:0.2rem 0 0.2rem 1rem; margin-top:1.5rem;
+  }
+
+  /* ---------- Contact ---------- */
+  .contact-list{ list-style:none; margin:0; padding:0; max-width:var(--measure); }
+  .contact-list li{ padding:0.7rem 0; border-top:1px solid var(--line); font-size:0.95rem; }
+  .contact-list li:first-child{ border-top:none; }
+  .contact-list .label{ display:inline-block; width:9rem; color:var(--ink-soft); font-size:0.85rem; }
+
+  footer{ padding:2rem; font-size:0.8rem; color:var(--ink-soft); max-width:820px; margin:0 auto; }
+
+  @media (max-width:640px){
+    .wrap, .masthead-inner, footer{ padding-left:1.2rem; padding-right:1.2rem; }
+    nav.masthead-nav{ display:none; }
+    .hero{ padding-top:2.5rem; }
+    .hero h1{ font-size:2rem; }
+    .timeline li{ grid-template-columns:5.5rem 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <a class="masthead-name" href="#top">Mehmet Yücel Ağargün</a>
+    <nav class="masthead-nav" aria-label="Bölümler">
+      <a href="#profil">Akademik Profil</a>
+      <a href="#uzmanlik">Uzmanlık Alanları</a>
+      <a href="#yayinlar">Yayınlar</a>
+      <a href="#halka">Ruh Sağlığı</a>
+      <a href="#iletisim">İletişim</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="hero" id="top">
+    <svg class="hero-illustration" viewBox="0 0 440 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M15,30 L60,30 L60,55 L100,55 L100,80 L145,80 L145,105 L190,105 L190,70 L235,70 L235,45 L280,45 L280,90 L325,90 L325,115 L370,115 L370,60 L415,60" />
+      <circle cx="415" cy="60" r="4"></circle>
+    </svg>
+    <div class="eyebrow">Ruh Sağlığı ve Hastalıkları — Psikiyatri</div>
+    <h1>Uyku, rüya ve ruh sağlığı üzerine akademik çalışma ve hasta bilgilendirmesi.</h1>
+    <p class="tagline">Prof. Dr. Mehmet Yücel Ağargün, psikiyatri alanında akademik kariyerini sürdüren, uyku bozuklukları, rüya araştırmaları ve klinik hipnoz konularında çalışmalar yürüten bir hekim ve akademisyendir.</p>
+    <div class="audience-select">
+      <a class="audience-link academic" href="#profil">Akademik profil ve yayınlar</a>
+      <a class="audience-link patient" href="#halka">Ruh sağlığı üzerine bilgilendirme</a>
+    </div>
+    <div class="credentials">
+      <span>Profesör, Psikiyatri</span>
+      <span>Sleep and Hypnosis Dergisi Baş Editörü</span>
+      <span>2652 atıf (SSCI/SCI/WoS)</span>
+    </div>
+  </section>
+
+  <section id="profil">
+    <div class="eyebrow">Akademik Profil</div>
+    <h2>Eğitim ve akademik gelişim</h2>
+    <ul class="timeline">
+      <li>
+        <span class="year">1988</span>
+        <span class="desc"><strong>Tıp Fakültesi Mezuniyeti</strong><span>İstanbul Üniversitesi Cerrahpaşa Tıp Fakültesi</span></span>
+      </li>
+      <li>
+        <span class="year">1994</span>
+        <span class="desc"><strong>Psikiyatri Uzmanlığı</strong><span>İstanbul Üniversitesi Cerrahpaşa Tıp Fakültesi</span></span>
+      </li>
+      <li>
+        <span class="year">1996</span>
+        <span class="desc"><strong>Doçentlik</strong><span>Psikiyatri, Van Yüzüncü Yıl Üniversitesi</span></span>
+      </li>
+      <li>
+        <span class="year">2001–2002</span>
+        <span class="desc"><strong>Visiting Professor</strong><span>Rush University Medical Center, Sleep Disorders Service, Chicago</span></span>
+      </li>
+      <li>
+        <span class="year">2002</span>
+        <span class="desc"><strong>Profesörlük</strong><span>Psikiyatri, Van Yüzüncü Yıl Üniversitesi</span></span>
+      </li>
+      <li>
+        <span class="year">2002–2007</span>
+        <span class="desc"><strong>Bölüm Başkanlığı</strong><span>Psikiyatri A.B.D. ve Sinirbilim Araştırma Merkezi Başkanlığı, Van Yüzüncü Yıl Üniversitesi Tıp Fakültesi</span></span>
+      </li>
+      <li>
+        <span class="year">2008–Halen</span>
+        <span class="desc"><strong>Bölüm ve Araştırma Merkezi Başkanlığı</strong><span>Psikiyatri A.B.D. ve RUHMER (Rüya, Uyku, Hipnoz Araştırmaları Merkezi) Başkanlığı, İstanbul Medipol Üniversitesi</span></span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="uzmanlik">
+    <div class="eyebrow">Uzmanlık Alanları</div>
+    <h2>Klinik ve akademik ilgi alanları</h2>
+    <ul class="areas">
+      <li><strong>Uyku bozuklukları</strong> ve uyku tıbbı</li>
+      <li><strong>Rüya araştırmaları</strong></li>
+      <li><strong>Klinik hipnoz</strong></li>
+      <li><strong>Disosiyatif bozukluklar</strong></li>
+      <li><strong>Uyku, depresyon</strong> ve intihar riski ilişkisi</li>
+      <li><strong>Perinatal ruh sağlığı</strong> (gebelik ve doğum sonrası dönem)</li>
+      <li><strong>Anksiyete bozuklukları</strong> ve panik bozukluğu</li>
+      <li><strong>Obsesif-kompulsif bozukluk</strong></li>
+      <li><strong>Kronobiyoloji</strong> ve kronotip</li>
+      <li><strong>Yeme bozuklukları</strong></li>
+    </ul>
+  </section>
+
+  <section id="yayinlar">
+    <div class="eyebrow">Yayınlar ve Akademik Faaliyet</div>
+    <h2>Yayınlar ve editörlük</h2>
+
+    <div class="pub-stats">
+      <div class="stat"><strong>55</strong><span>uluslararası hakemli makale</span></div>
+      <div class="stat"><strong>21</strong><span>ulusal hakemli makale</span></div>
+      <div class="stat"><strong>2652</strong><span>atıf (SSCI/SCI/WoS)</span></div>
+    </div>
+
+    <div class="pub-block">
+      <h3>Editörlük</h3>
+      <p>Baş Editör, <em>Sleep and Hypnosis: International Journal of Sleep, Dreams, and Hypnosis</em>, 1999–</p>
+      <p>Yardımcı Editör, <em>International Journal of Clinical and Experimental Hypnosis</em></p>
+      <p>Ziyaretçi Editör, <em>Acta Psychiatrica Scandinavica</em></p>
+      <p>Danışma Kurulu Üyesi, <em>Anadolu Psikiyatri Dergisi</em> ve <em>The Open Psychiatry Journal</em></p>
+    </div>
+
+    <div class="pub-block">
+      <h3>Hakemlik</h3>
+      <div class="roles">
+        <span>Acta Psychiatrica Scandinavica</span>
+        <span>JAMA Psychiatry</span>
+        <span>Sleep</span>
+        <span>Journal of Clinical Sleep Medicine</span>
+        <span>Sleep Medicine Reviews</span>
+        <span>Journal of Psychiatric Research</span>
+        <span>Psychiatry Research</span>
+        <span>Comprehensive Psychiatry</span>
+        <span>Turkish Journal of Psychiatry</span>
+      </div>
+    </div>
+
+    <div class="pub-block">
+      <h3>Bilimsel Kuruluş Üyelikleri</h3>
+      <div class="roles">
+        <span>American Sleep Medicine Academy, 2001–</span>
+        <span>Avrupa Uyku Araştırmaları Topluluğu, 2006–</span>
+        <span>Asya Uyku Araştırmaları Topluluğu, 1997–</span>
+        <span>Türk Psikiyatri Derneği, 1992–</span>
+        <span>Türk Nöropsikiyatri Birliği, 1992–</span>
+      </div>
+    </div>
+
+    <div class="pub-block">
+      <h3>Seçilmiş Yayınlar</h3>
+      <ul class="pub-list">
+        <li><span class="journal">Agargun MY, Ozer OA, Kara H, Sekeroglu R, Selvi Y, Eryonucu B.</span> Serum lipid levels in patients with dissociative disorder. <em>American Journal of Psychiatry</em>, 2004;161(11):2121–3.</li>
+        <li><span class="journal">Agargun MY, Cilli AS, Sener S, Bilici M, Ozer OA, Selvi Y, Karacan E.</span> The prevalence of parasomnias in preadolescent school-aged children: a Turkish sample. <em>Sleep</em>, 2004;27(4):701–5.</li>
+        <li><span class="journal">Agargun MY, Cartwright R.</span> REM sleep, dream variables and suicidality in depressed patients. <em>Psychiatry Research</em>, 2003;119(1–2):33–9.</li>
+        <li><span class="journal">Agargun MY, Tekeoglu I, Kara H, Adak B, Ercan M.</span> Hypnotizability, pain threshold, and dissociative experiences. <em>Biological Psychiatry</em>, 1998;44(1):69–71.</li>
+        <li><span class="journal">Agargun MY, Kara H, Solmaz M.</span> Subjective sleep quality and suicidality in patients with major depression. <em>Journal of Psychiatric Research</em>, 1997;31(3):377–81.</li>
+        <li><span class="journal">Selvi Y, Aydin A, Boysan M, Atli A, Agargun MY, Besiroglu L.</span> Associations between chronotype, sleep quality, suicidality, and depressive symptoms. <em>Chronobiology International</em>, 2010;27(9–10):1813–28.</li>
+        <li><span class="journal">Agargun MY.</span> Serum cholesterol concentration, depression, and anxiety. <em>Acta Psychiatrica Scandinavica</em>, 2002;105(2):81–3.</li>
+      </ul>
+      <p class="note">Tam yayın listesi CV'nizden alınmıştır; sitede yalnızca konu çeşitliliğini yansıtan bir seçki gösteriliyor — dilerseniz tam listeyi ayrı bir sayfada da yayımlayabiliriz.</p>
+    </div>
+  </section>
+
+  <section id="halka">
+    <div class="eyebrow">Ruh Sağlığı</div>
+    <h2>Ruh sağlığı hakkında</h2>
+    <p style="margin-bottom:1.8rem;">Bu bölümdeki içerikler, sık karşılaşılan ruh sağlığı konularını genel hatlarıyla tanıtmak amacıyla hazırlanmıştır.</p>
+    <ul class="patient-guide">
+      <li>
+        <h3>Hamilelik Sırasında Depresyon ve Doğum Sonrası Depresyonu Tanıyalım</h3>
+        <p>Gebelik ve doğum sonrası dönem, ruhsal açıdan kırılgan bir süreçtir. Bu dönemde ortaya çıkan depresyon belirtilerinin erken tanınması, anne ve bebek sağlığı açısından önemlidir.</p>
+      </li>
+      <li>
+        <h3>Erken Doğum ve Doğum Sonrası Anksiyete</h3>
+        <p>Erken doğum deneyimi, doğum sonrası dönemde yoğun kaygı belirtilerine yol açabilir; bu belirtilerin fark edilmesi ve desteklenmesi iyileşme sürecini kolaylaştırır.</p>
+      </li>
+      <li>
+        <h3>Obsesif Kompulsif Bozukluk ve Tedavisi</h3>
+        <p>Tekrarlayan istenmeyen düşünceler ve bunlara eşlik eden zorlayıcı davranışlarla seyreden OKB, uygun tedavi yaklaşımlarıyla kontrol altına alınabilir.</p>
+      </li>
+      <li>
+        <h3>Yeme Bozuklukları ve Tedavisi</h3>
+        <p>Yeme bozuklukları, hem bedensel hem ruhsal boyutları olan, uzman bir ekip yaklaşımı gerektiren durumlardır.</p>
+      </li>
+      <li>
+        <h3>Gebelikte Huzursuz Bacak Sendromu</h3>
+        <p>Gebelik döneminde sık görülen huzursuz bacak sendromu, uyku kalitesini etkileyebilir; değerlendirme ve yönetimi uzman desteği gerektirir.</p>
+      </li>
+      <li>
+        <h3>Ne Zaman Bir Psikiyatriste Başvurmalı?</h3>
+        <p>Günlük işlevselliği bozan sürekli üzüntü, kaygı, uyku sorunları veya davranış değişiklikleri fark edildiğinde, vakit kaybetmeden bir uzmana danışılması önerilir.</p>
+      </li>
+    </ul>
+    <p class="disclaimer">Bu sayfadaki bilgiler yalnızca genel bilgilendirme amaçlıdır; tanı ve tedavi yerine geçmez. Şikayetleriniz için mutlaka bir sağlık kuruluşuna başvurunuz.</p>
+  </section>
+
+  <section id="iletisim">
+    <div class="eyebrow">İletişim</div>
+    <h2>İletişim</h2>
+    <ul class="contact-list">
+      <li><span class="label">Unvan</span> Prof. Dr. Mehmet Yücel Ağargün — Ruh Sağlığı ve Hastalıkları Uzmanı</li>
+      <li><span class="label">Akademik Kurum</span> İstanbul Medipol Üniversitesi, Psikiyatri A.B.D. ve RUHMER Başkanı</li>
+      <li><span class="label">Adres</span> İnkılap Mahallesi, Küçüksu Caddesi, Oruçbey Sokak, Tek Merve Plaza No: 2/8 Kat: 6 Daire: 19, Ümraniye/İstanbul</li>
+      <li><span class="label">Telefon</span> <a href="tel:+905312527910">+90 531 252 79 10</a></li>
+      <li><span class="label">E-posta</span> <a href="mailto:myucelagargun@gmail.com">myucelagargun@gmail.com</a></li>
+    </ul>
+  </section>
+
+</div>
+
+<footer>© <span id="year"></span> Mehmet Yücel Ağargün — Bu içerikler genel bilgilendirme amaçlıdır, tıbbi tavsiye niteliği taşımaz.</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const links = document.querySelectorAll('nav.masthead-nav a');
+  const sections = Array.from(links).map(l => document.querySelector(l.getAttribute('href')));
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const id = '#' + entry.target.id;
+      const link = document.querySelector(`nav.masthead-nav a[href="${id}"]`);
+      if (!link) return;
+      if (entry.isIntersecting){
+        links.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-15% 0px -75% 0px', threshold: 0 });
+
+  sections.forEach(s => { if (s) observer.observe(s); });
+</script>
+
+</body>
+</html>
