@@ -49,6 +49,19 @@
 
   .wrap{ max-width:820px; margin:0 auto; padding:0 2rem; }
 
+  /* ---------- Harita ---------- */
+  .map-wrap{
+    margin-top:2rem;
+    border:1px solid var(--line);
+    border-radius:2px;
+    overflow:hidden;
+    background:var(--paper-raised);
+    aspect-ratio:16 / 9;
+  }
+  .map-wrap iframe{ width:100%; height:100%; border:0; display:block; filter:saturate(0.9); }
+  @media (max-width:600px){ .map-wrap{ aspect-ratio:4 / 3; } }
+  .map-link{ margin:0.9rem 0 0; font-size:0.9rem; }
+
   /* ---------- Masthead ---------- */
   header.masthead{
     position:sticky; top:0; z-index:10;
@@ -414,6 +427,18 @@
       <li><span class="label">Telefon</span> <a href="tel:+905312527910">+90 531 252 79 10</a></li>
       <li><span class="label">E-posta</span> <a href="mailto:myucelagargun@gmail.com">myucelagargun@gmail.com</a></li>
     </ul>
+
+    <div class="map-wrap">
+      <iframe
+        src="https://maps.google.com/maps?q=%C4%B0nk%C4%B1lap%20Mahallesi%2C%20K%C3%BC%C3%A7%C3%BCksu%20Caddesi%2C%20Oru%C3%A7bey%20Sokak%2C%20Tek%20Merve%20Plaza%20No%3A%202/8%20Kat%3A%206%20Daire%3A%2019%2C%20%C3%9Cmraniye/%C4%B0stanbul&amp;hl=tr&amp;z=17&amp;output=embed"
+        title="Muayenehane konumu — Tek Merve Plaza, Ümraniye/İstanbul"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen></iframe>
+    </div>
+    <p class="map-link">
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=%C4%B0nk%C4%B1lap%20Mahallesi%2C%20K%C3%BC%C3%A7%C3%BCksu%20Caddesi%2C%20Oru%C3%A7bey%20Sokak%2C%20Tek%20Merve%20Plaza%20No%3A%202/8%20Kat%3A%206%20Daire%3A%2019%2C%20%C3%9Cmraniye/%C4%B0stanbul" target="_blank" rel="noopener">Google Haritalar'da aç ve yol tarifi al →</a>
+    </p>
   </section>
 
 </div>
