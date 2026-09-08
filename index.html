@@ -62,6 +62,18 @@
   @media (max-width:600px){ .map-wrap{ aspect-ratio:4 / 3; } }
   .map-link{ margin:0.9rem 0 0; font-size:0.9rem; }
 
+  .guide-link{
+    color:inherit; text-decoration:none;
+    border-bottom:1px solid var(--gold-soft);
+    transition:color .15s ease, border-color .15s ease;
+  }
+  .guide-link:hover, .guide-link:focus{ color:var(--gold); border-bottom-color:var(--gold); }
+  .patient-guide li:has(.guide-link)::after{
+    content:"İnfografiği görüntüle →";
+    display:block; margin-top:0.5rem;
+    font-family:var(--sans); font-size:0.82rem; color:var(--gold);
+  }
+
   /* ---------- Masthead ---------- */
   header.masthead{
     position:sticky; top:0; z-index:10;
@@ -386,7 +398,7 @@
     <p style="margin-bottom:1.8rem;">Bu bölümdeki içerikler, sık karşılaşılan ruh sağlığı konularını genel hatlarıyla tanıtmak ve bazı özellikli durumlar için güncel bilgileri derleyerek danışan ve hasta yakınlarını bilgilendirmek amacıyla hazırlanmıştır.</p>
     <ul class="patient-guide">
       <li>
-        <h3>Hamilelik Sırasında Depresyon ve Doğum Sonrası Depresyonu Tanıyalım</h3>
+        <h3><a class="guide-link" href="yazilar/perinatal-depresyon.html">Hamilelik Sırasında Depresyon ve Doğum Sonrası Depresyonu Tanıyalım</a></h3>
         <p>Gebelik ve doğum sonrası dönem, ruhsal açıdan kırılgan bir süreçtir. Bu dönemde ortaya çıkan depresyon belirtilerinin erken tanınması, anne ve bebek sağlığı açısından önemlidir.</p>
       </li>
       <li>
