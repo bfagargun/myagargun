@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="gorseller/favicon.png">
 <title>Prof. Dr. Mehmet Yücel Ağargün — Ruh Sağlığı ve Hastalıkları</title>
 <meta name="description" content="Prof. Dr. Mehmet Yücel Ağargün'ün akademik profili, uyku ve klinik hipnoz alanındaki çalışmaları ve ruh sağlığı üzerine hasta bilgilendirmesi.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -98,6 +99,14 @@
 
   /* ---------- Hero ---------- */
   .hero{ padding:4rem 0 3rem 0; }
+  .hero-logo{
+    width:132px; height:132px; display:block;
+    margin:0 0 1.8rem; border-radius:50%;
+    box-shadow:0 2px 14px rgba(33,29,46,.14);
+  }
+  .masthead-logo{ width:30px; height:30px; border-radius:50%; display:block; flex:none; }
+  .masthead-brand{ display:flex; align-items:center; gap:0.6rem; text-decoration:none; }
+  @media (max-width:600px){ .hero-logo{ width:104px; height:104px; } }
   .hero-illustration{ width:100%; max-width:440px; height:auto; margin-bottom:2.2rem; display:block; }
   .hero-illustration path{
     fill:none; stroke:var(--gold-soft); stroke-width:1.6;
@@ -237,7 +246,10 @@
 
 <header class="masthead">
   <div class="masthead-inner">
-    <a class="masthead-name" href="#top">Mehmet Yücel Ağargün</a>
+    <a class="masthead-brand" href="#top">
+      <img class="masthead-logo" src="gorseller/favicon.png" width="180" height="180" alt="">
+      <span class="masthead-name">Mehmet Yücel Ağargün</span>
+    </a>
     <nav class="masthead-nav" aria-label="Bölümler">
       <a href="#profil">Akademik Profil</a>
       <a href="#uzmanlik">Uzmanlık Alanları</a>
@@ -251,10 +263,8 @@
 <div class="wrap">
 
   <section class="hero" id="top">
-    <svg class="hero-illustration" viewBox="0 0 440 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M15,30 L60,30 L60,55 L100,55 L100,80 L145,80 L145,105 L190,105 L190,70 L235,70 L235,45 L280,45 L280,90 L325,90 L325,115 L370,115 L370,60 L415,60" />
-      <circle cx="415" cy="60" r="4"></circle>
-    </svg>
+    <img class="hero-logo" src="gorseller/logo.png" width="720" height="720"
+         alt="Dalları ve kökleriyle bir insan beyni biçimi oluşturan ağaç figürü — Prof. Dr. Mehmet Yücel Ağargün logosu">
     <h1>Prof. Dr. Mehmet Yücel Ağargün</h1>
     <p class="tagline">Ruh sağlığı alanında akademik kariyerini sürdüren; uyku, rüyalar ve hipnoz konuları başta olmak üzere psikiyatrinin tüm alanlarında bilimsel araştırmalar ve klinik çalışmalar yürüten bir hekim ve akademisyendir.</p>
     <div class="audience-select">
