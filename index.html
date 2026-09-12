@@ -253,10 +253,19 @@
 
   @media (max-width:640px){
     .wrap, .masthead-inner, footer{ padding-left:1.2rem; padding-right:1.2rem; }
-    nav.masthead-nav{ display:none; }
+    nav.masthead-nav{
+      width:100%; gap:0.5rem 1rem; justify-content:flex-start;
+      margin-top:0.6rem; padding-top:0.6rem; border-top:1px solid var(--line);
+    }
+    nav.masthead-nav a{ font-size:0.8rem; }
     .hero{ padding-top:2.5rem; }
     .hero h1{ font-size:2rem; }
     .timeline li{ grid-template-columns:5.5rem 1fr; }
+    .contact-list .label{
+      display:block; width:auto; margin-bottom:0.15rem;
+      font-size:0.78rem; letter-spacing:0.06em; text-transform:uppercase;
+    }
+    .contact-list li{ font-size:0.92rem; }
   }
 </style>
 </head>
