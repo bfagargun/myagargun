@@ -6,6 +6,22 @@
 <link rel="icon" type="image/png" href="gorseller/favicon-v4.png">
 <title>Prof. Dr. Mehmet Yücel Ağargün — Ruh Sağlığı ve Hastalıkları</title>
 <meta name="description" content="Prof. Dr. Mehmet Yücel Ağargün'ün akademik profili, uyku ve klinik hipnoz alanındaki çalışmaları ve ruh sağlığı üzerine hasta bilgilendirmesi.">
+<link rel="canonical" href="https://myagargun.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Prof. Dr. Mehmet Yücel Ağargün">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:url" content="https://myagargun.com/">
+<meta property="og:title" content="Prof. Dr. Mehmet Yücel Ağargün — Ruh Sağlığı ve Hastalıkları">
+<meta property="og:description" content="Prof. Dr. Mehmet Yücel Ağargün'ün akademik profili, uyku ve klinik hipnoz alanındaki çalışmaları ve ruh sağlığı üzerine hasta bilgilendirmesi.">
+<meta property="og:image" content="https://myagargun.com/gorseller/og/index.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="Prof. Dr. Mehmet Yücel Ağargün — Ruh Sağlığı ve Hastalıkları — Prof. Dr. Mehmet Yücel Ağargün">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Prof. Dr. Mehmet Yücel Ağargün — Ruh Sağlığı ve Hastalıkları">
+<meta name="twitter:description" content="Prof. Dr. Mehmet Yücel Ağargün'ün akademik profili, uyku ve klinik hipnoz alanındaki çalışmaları ve ruh sağlığı üzerine hasta bilgilendirmesi.">
+<meta name="twitter:image" content="https://myagargun.com/gorseller/og/index.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -87,7 +103,7 @@
     transition:color .15s ease, border-color .15s ease;
   }
   .guide-link:hover, .guide-link:focus{ color:var(--gold); border-bottom-color:var(--gold); }
-  .patient-guide li:has(.guide-link)::after{
+  .patient-guide li:has(.guide-link) .guide-text::after{
     content:"İnfografiği görüntüle →";
     display:block; margin-top:0.5rem;
     font-family:var(--sans); font-size:0.82rem; color:var(--gold);
@@ -233,8 +249,15 @@
 
   /* ---------- Patient section ---------- */
   .patient-guide{ list-style:none; margin:0 0 1.6rem 0; padding:0; max-width:var(--measure); }
-  .patient-guide li{ padding:1.4rem 0; border-top:1px solid var(--line); }
+  .patient-guide li{ padding:1.4rem 0; border-top:1px solid var(--line); display:flex; gap:1.15rem; align-items:flex-start; }
   .patient-guide li:first-child{ border-top:none; }
+  .guide-thumb{ flex:none; display:block; width:104px; border:1px solid var(--line); border-radius:3px; overflow:hidden; background:var(--raised); }
+  .guide-thumb img{ display:block; width:100%; height:auto; }
+  .guide-text{ min-width:0; }
+  @media (max-width:600px){
+    .patient-guide li{ gap:0.9rem; }
+    .guide-thumb{ width:74px; }
+  }
   .patient-guide h3{ font-size:1.1rem; margin-bottom:0.4rem; color:var(--plum); }
   .patient-guide p{ font-size:0.95rem; margin:0; }
 
@@ -454,128 +477,221 @@
     <p style="margin-bottom:1.8rem;">Bu bölümdeki içerikler, sık karşılaşılan ruh sağlığı konularını genel hatlarıyla tanıtmak ve bazı özellikli durumlar için güncel bilgileri derleyerek danışan ve hasta yakınlarını bilgilendirmek amacıyla hazırlanmıştır.</p>
     <ul class="patient-guide">
       <li>
-        <h3><a class="guide-link" href="yazilar/perinatal-depresyon.html">Hamilelik Sırasında Depresyon ve Doğum Sonrası Depresyonu Tanıyalım</a></h3>
+        <a class="guide-thumb" href="yazilar/perinatal-depresyon.html" tabindex="-1" aria-hidden="true"><img src="gorseller/kucuk/perinatal-depresyon.jpg" width="300" height="300" alt="" loading="lazy"></a>
+        <div class="guide-text">
+          <h3><a class="guide-link" href="yazilar/perinatal-depresyon.html">Hamilelik Sırasında Depresyon ve Doğum Sonrası Depresyonu Tanıyalım</a></h3>
         <p>Gebelik ve doğum sonrası dönem, ruhsal açıdan kırılgan bir süreçtir. Bu dönemde ortaya çıkan depresyon belirtilerinin erken tanınması, anne ve bebek sağlığı açısından önemlidir.</p>
+        </div>
       </li>
       <li>
-        <h3><a class="guide-link" href="yazilar/erken-dogum-anksiyete.html">Erken Doğum ve Doğum Sonrası Anksiyete</a></h3>
+        <a class="guide-thumb" href="yazilar/erken-dogum-anksiyete.html" tabindex="-1" aria-hidden="true"><img src="gorseller/kucuk/erken-dogum-anksiyete.jpg" width="300" height="300" alt="" loading="lazy"></a>
+        <div class="guide-text">
+          <h3><a class="guide-link" href="yazilar/erken-dogum-anksiyete.html">Erken Doğum ve Doğum Sonrası Anksiyete</a></h3>
         <p>Erken doğum deneyimi, doğum sonrası dönemde yoğun kaygı belirtilerine yol açabilir; bu belirtilerin fark edilmesi ve desteklenmesi iyileşme sürecini kolaylaştırır.</p>
+        </div>
       </li>
       <li>
-        <h3><a class="guide-link" href="yazilar/obsesif-kompulsif-bozukluk.html">Obsesif Kompulsif Bozukluk ve Tedavisi</a></h3>
+        <a class="guide-thumb" href="yazilar/obsesif-kompulsif-bozukluk.html" tabindex="-1" aria-hidden="true"><img src="gorseller/kucuk/obsesif-kompulsif-bozukluk.jpg" width="300" height="300" alt="" loading="lazy"></a>
+        <div class="guide-text">
+          <h3><a class="guide-link" href="yazilar/obsesif-kompulsif-bozukluk.html">Obsesif Kompulsif Bozukluk ve Tedavisi</a></h3>
         <p>Tekrarlayan istenmeyen düşünceler ve bunlara eşlik eden zorlayıcı davranışlarla seyreden OKB, uygun tedavi yaklaşımlarıyla kontrol altına alınabilir.</p>
+        </div>
       </li>
       <li>
-        <h3><a class="guide-link" href="yazilar/yeme-bozukluklari.html">Yeme Bozuklukları ve Tedavisi</a></h3>
+        <a class="guide-thumb" href="yazilar/yeme-bozukluklari.html" tabindex="-1" aria-hidden="true"><img src="gorseller/kucuk/yeme-bozukluklari.jpg" width="300" height="300" alt="" loading="lazy"></a>
+        <div class="guide-text">
+          <h3><a class="guide-link" href="yazilar/yeme-bozukluklari.html">Yeme Bozuklukları ve Tedavisi</a></h3>
         <p>Yeme bozuklukları, hem bedensel hem ruhsal boyutları olan, uzman bir ekip yaklaşımı gerektiren durumlardır.</p>
+        </div>
       </li>
       <li>
-        <h3><a class="guide-link" href="yazilar/huzursuz-bacak-gebelik.html">Gebelikte Huzursuz Bacak Sendromu</a></h3>
+        <a class="guide-thumb" href="yazilar/huzursuz-bacak-gebelik.html" tabindex="-1" aria-hidden="true"><img src="gorseller/kucuk/huzursuz-bacak-gebelik.jpg" width="300" height="300" alt="" loading="lazy"></a>
+        <div class="guide-text">
+          <h3><a class="guide-link" href="yazilar/huzursuz-bacak-gebelik.html">Gebelikte Huzursuz Bacak Sendromu</a></h3>
         <p>Gebelik döneminde sık görülen huzursuz bacak sendromu, uyku kalitesini etkileyebilir; değerlendirme ve yönetimi uzman desteği gerektirir.</p>
+        </div>
       </li>
       <li>
-        <h3><a class="guide-link" href="yazilar/antidepresan-cinsel-yan-etkiler.html">Antidepresan İlaçlar ve Cinsel Yan Etkileri</a></h3>
+        <a class="guide-thumb" href="yazilar/antidepresan-cinsel-yan-etkiler.html" tabindex="-1" aria-hidden="true"><img src="gorseller/kucuk/antidepresan-cinsel-yan-etkiler.jpg" width="300" height="300" alt="" loading="lazy"></a>
+        <div class="guide-text">
+          <h3><a class="guide-link" href="yazilar/antidepresan-cinsel-yan-etkiler.html">Antidepresan İlaçlar ve Cinsel Yan Etkileri</a></h3>
         <p>Antidepresan tedavisi sırasında görülebilen cinsel işlev sorunları sık karşılaşılan, ancak çoğu zaman dile getirilmediği için ele alınmayan yönetilebilir bir yan etkidir.</p>
+        </div>
       </li>
       <li>
-        <h3><a class="guide-link" href="yazilar/antidepresan-kanama-riski.html">Antidepresan İlaçlar ve Kanama Riski</a></h3>
+        <a class="guide-thumb" href="yazilar/antidepresan-kanama-riski.html" tabindex="-1" aria-hidden="true"><img src="gorseller/kucuk/antidepresan-kanama-riski.jpg" width="300" height="300" alt="" loading="lazy"></a>
+        <div class="guide-text">
+          <h3><a class="guide-link" href="yazilar/antidepresan-kanama-riski.html">Antidepresan İlaçlar ve Kanama Riski</a></h3>
         <p>SSRI grubu ilaçlar pıhtılaşma sürecini hafifçe etkileyebilir; bu durum çoğu kişide önemsizdir, ancak bazı ilaç birlikteliklerinde ve hasta gruplarında dikkat gerektirir.</p>
+        </div>
       </li>
       <li>
-        <h3><a class="guide-link" href="yazilar/depresyon-mikrobiyom.html">Depresyon ve Bağırsak Mikrobiyomu İlişkisi: Antidepresan İlaçların Etkisi</a></h3>
+        <a class="guide-thumb" href="yazilar/depresyon-mikrobiyom.html" tabindex="-1" aria-hidden="true"><img src="gorseller/kucuk/depresyon-mikrobiyom.jpg" width="300" height="300" alt="" loading="lazy"></a>
+        <div class="guide-text">
+          <h3><a class="guide-link" href="yazilar/depresyon-mikrobiyom.html">Depresyon ve Bağırsak Mikrobiyomu İlişkisi: Antidepresan İlaçların Etkisi</a></h3>
         <p>Bağırsak florası ile ruh sağlığı karşılıklı bir etkileşim içindedir; antidepresan ilaçların bu denge üzerindeki etkileri güncel bir araştırma alanıdır.</p>
+        </div>
       </li>
       <li>
-        <h3><a class="guide-link" href="yazilar/ensefalit-psikiyatrik.html">Ensefalitin Psikiyatrik Boyutu</a></h3>
+        <a class="guide-thumb" href="yazilar/ensefalit-psikiyatrik.html" tabindex="-1" aria-hidden="true"><img src="gorseller/kucuk/ensefalit-psikiyatrik.jpg" width="300" height="300" alt="" loading="lazy"></a>
+        <div class="guide-text">
+          <h3><a class="guide-link" href="yazilar/ensefalit-psikiyatrik.html">Ensefalitin Psikiyatrik Boyutu</a></h3>
         <p>Beyin iltihabı bazen ilk belirtilerini ruhsal alanda verir; bu tablonun erken tanınması ve iyileşme sonrası kalan sekellerin yönetimi önem taşır.</p>
+        </div>
       </li>
       <li>
-        <h3><a class="guide-link" href="yazilar/ileri-yas-bipolar.html">İleri Yaşta Bipolar Bozukluk</a></h3>
+        <a class="guide-thumb" href="yazilar/ileri-yas-bipolar.html" tabindex="-1" aria-hidden="true"><img src="gorseller/kucuk/ileri-yas-bipolar.jpg" width="300" height="300" alt="" loading="lazy"></a>
+        <div class="guide-text">
+          <h3><a class="guide-link" href="yazilar/ileri-yas-bipolar.html">İleri Yaşta Bipolar Bozukluk</a></h3>
         <p>İleri yaşta bipolar bozuklukta duygudurum tedavisinin yanı sıra bedensel sağlığın düzenli izlenmesi seyri belirleyen etkenlerdendir.</p>
+        </div>
       </li>
       <li>
-        <h3><a class="guide-link" href="yazilar/hiperparatiroidizm-ruh-sagligi.html">Primer Hiperparatiroidi ve Ruh Sağlığı</a></h3>
+        <a class="guide-thumb" href="yazilar/hiperparatiroidizm-ruh-sagligi.html" tabindex="-1" aria-hidden="true"><img src="gorseller/kucuk/hiperparatiroidizm-ruh-sagligi.jpg" width="300" height="300" alt="" loading="lazy"></a>
+        <div class="guide-text">
+          <h3><a class="guide-link" href="yazilar/hiperparatiroidizm-ruh-sagligi.html">Primer Hiperparatiroidi ve Ruh Sağlığı</a></h3>
         <p>Depresyon, kaygı ve zihinsel bulanıklık gibi belirtilerin altında bazen hormonal bir neden yatar; bu tablo tedavi edilebilir bir kaynağa işaret edebilir.</p>
+        </div>
       </li>
       <li>
-        <h3><a class="guide-link" href="yazilar/glp1-psikiyatri.html">Psikiyatride GLP-1 Reseptör Agonistleri</a></h3>
+        <a class="guide-thumb" href="yazilar/glp1-psikiyatri.html" tabindex="-1" aria-hidden="true"><img src="gorseller/kucuk/glp1-psikiyatri.jpg" width="300" height="300" alt="" loading="lazy"></a>
+        <div class="guide-text">
+          <h3><a class="guide-link" href="yazilar/glp1-psikiyatri.html">Psikiyatride GLP-1 Reseptör Agonistleri</a></h3>
         <p>Diyabet ve obezite tedavisinde kullanılan bu ilaçların psikiyatrideki yeri, özellikle ilaca bağlı kilo alımı açısından araştırılmaktadır.</p>
+        </div>
       </li>
       <li>
-        <h3><a class="guide-link" href="yazilar/yapay-zeka-terapi.html">Terapistsiz Terapi: Yapay Zekâ ve İnsan Terapist</a></h3>
+        <a class="guide-thumb" href="yazilar/yapay-zeka-terapi.html" tabindex="-1" aria-hidden="true"><img src="gorseller/kucuk/yapay-zeka-terapi.jpg" width="300" height="300" alt="" loading="lazy"></a>
+        <div class="guide-text">
+          <h3><a class="guide-link" href="yazilar/yapay-zeka-terapi.html">Terapistsiz Terapi: Yapay Zekâ ve İnsan Terapist</a></h3>
         <p>Sohbet botları kısa vadeli destek sağlayabilir; ancak kriz anları, kalıcı iyileşme ve tedavi planlaması söz konusu olduğunda bir uzmanın yerini tutmaz.</p>
+        </div>
       </li>
       <li>
-        <h3><a class="guide-link" href="yazilar/sezaryen-anestezi-ppd.html">Sezaryen Doğumda Anestezi Seçimi ve Doğum Sonrası Depresyon</a></h3>
+        <a class="guide-thumb" href="yazilar/sezaryen-anestezi-ppd.html" tabindex="-1" aria-hidden="true"><img src="gorseller/kucuk/sezaryen-anestezi-ppd.jpg" width="300" height="300" alt="" loading="lazy"></a>
+        <div class="guide-text">
+          <h3><a class="guide-link" href="yazilar/sezaryen-anestezi-ppd.html">Sezaryen Doğumda Anestezi Seçimi ve Doğum Sonrası Depresyon</a></h3>
         <p>Sezaryende uygulanan anestezi yöntemi ile doğum sonrası depresyon arasındaki ilişki, gözlemsel verilerle araştırılan bir konudur.</p>
+        </div>
       </li>
       <li>
-        <h3><a class="guide-link" href="yazilar/kronotip-ruh-sagligi.html">Vücut Saatiniz ve Ruh Sağlığınız: Akşamcıl Olmanın Psikolojik Etkileri</a></h3>
+        <a class="guide-thumb" href="yazilar/kronotip-ruh-sagligi.html" tabindex="-1" aria-hidden="true"><img src="gorseller/kucuk/kronotip-ruh-sagligi.jpg" width="300" height="300" alt="" loading="lazy"></a>
+        <div class="guide-text">
+          <h3><a class="guide-link" href="yazilar/kronotip-ruh-sagligi.html">Vücut Saatiniz ve Ruh Sağlığınız: Akşamcıl Olmanın Psikolojik Etkileri</a></h3>
         <p>Kronotip, yani biyolojik saatin yatkınlığı, uyku düzenini ve ruh halini etkiler; günlük alışkanlıklarla bu etki dengelenebilir.</p>
+        </div>
       </li>
       <li>
-        <h3><a class="guide-link" href="yazilar/yaslilik-ruh-cilt-sagligi.html">Yaşlılık Döneminde Ruh ve Cilt Sağlığı</a></h3>
+        <a class="guide-thumb" href="yazilar/yaslilik-ruh-cilt-sagligi.html" tabindex="-1" aria-hidden="true"><img src="gorseller/kucuk/yaslilik-ruh-cilt-sagligi.jpg" width="300" height="300" alt="" loading="lazy"></a>
+        <div class="guide-text">
+          <h3><a class="guide-link" href="yazilar/yaslilik-ruh-cilt-sagligi.html">Yaşlılık Döneminde Ruh ve Cilt Sağlığı</a></h3>
         <p>Yaşlılıkta cilt ile ruhsal durum karşılıklı olarak birbirini etkiler; kaşıntı ve deri yolma gibi yakınmaların yönetiminde dermatoloji ile psikiyatrinin birlikte çalışması önem taşır.</p>
+        </div>
       </li>
       <li>
-        <h3><a class="guide-link" href="yazilar/dehb-cocukluktan-eriskinlige.html">Çocukluktan Yetişkinliğe DEHB</a></h3>
+        <a class="guide-thumb" href="yazilar/dehb-cocukluktan-eriskinlige.html" tabindex="-1" aria-hidden="true"><img src="gorseller/kucuk/dehb-cocukluktan-eriskinlige.jpg" width="300" height="300" alt="" loading="lazy"></a>
+        <div class="guide-text">
+          <h3><a class="guide-link" href="yazilar/dehb-cocukluktan-eriskinlige.html">Çocukluktan Yetişkinliğe DEHB</a></h3>
         <p>Çocuklukta konulan DEHB tanısı bir bölüm kişide yetişkinlikte de sürer; çocukluk dönemindeki hangi özelliklerin bu sürekliliğe işaret ettiğini bilmek izlem planını yönlendirir.</p>
+        </div>
       </li>
       <li>
-        <h3><a class="guide-link" href="yazilar/uyku-sac-sagligi.html">Uyku ve Saç Sağlığı</a></h3>
+        <a class="guide-thumb" href="yazilar/uyku-sac-sagligi.html" tabindex="-1" aria-hidden="true"><img src="gorseller/kucuk/uyku-sac-sagligi.jpg" width="300" height="300" alt="" loading="lazy"></a>
+        <div class="guide-text">
+          <h3><a class="guide-link" href="yazilar/uyku-sac-sagligi.html">Uyku ve Saç Sağlığı</a></h3>
         <p>Uyku düzeni ile saç sağlığı karşılıklı olarak birbirini etkileyebilir; stres hormonları, bağışıklık yanıtı ve vücut saati bu ilişkinin başlıca basamaklarıdır.</p>
+        </div>
       </li>
       <li>
-        <h3><a class="guide-link" href="yazilar/bipolar-ilac-cilt-yan-etkileri.html">Bipolar Bozukluk İlaçlarının Cilt Yan Etkileri</a></h3>
+        <a class="guide-thumb" href="yazilar/bipolar-ilac-cilt-yan-etkileri.html" tabindex="-1" aria-hidden="true"><img src="gorseller/kucuk/bipolar-ilac-cilt-yan-etkileri.jpg" width="300" height="300" alt="" loading="lazy"></a>
+        <div class="guide-text">
+          <h3><a class="guide-link" href="yazilar/bipolar-ilac-cilt-yan-etkileri.html">Bipolar Bozukluk İlaçlarının Cilt Yan Etkileri</a></h3>
         <p>Duygudurum düzenleyicilerin ciltte yaptığı döküntü ve saç dökülmesi çoğunlukla hafiftir; hangi ilaçta neyin ne zaman beklendiğini bilmek tedavinin yarıda kalmasını önler.</p>
+        </div>
       </li>
       <li>
-        <h3><a class="guide-link" href="yazilar/bobrek-ruh-sagligi.html">Böbrek Hastalığı ve Ruh Sağlığı</a></h3>
+        <a class="guide-thumb" href="yazilar/bobrek-ruh-sagligi.html" tabindex="-1" aria-hidden="true"><img src="gorseller/kucuk/bobrek-ruh-sagligi.jpg" width="300" height="300" alt="" loading="lazy"></a>
+        <div class="guide-text">
+          <h3><a class="guide-link" href="yazilar/bobrek-ruh-sagligi.html">Böbrek Hastalığı ve Ruh Sağlığı</a></h3>
         <p>Kronik böbrek hastalığında depresyon ve kaygı sıktır ve belirtileri hastalığın kendi belirtileriyle örtüştüğü için gözden kaçar; oysa tedaviye uyumu ve hastalığın gidişini etkiler.</p>
+        </div>
       </li>
       <li>
-        <h3><a class="guide-link" href="yazilar/bipolar-uyku-melatonin.html">Bipolar Bozuklukta Uyku, Melatonin ve Vücut Saati</a></h3>
+        <a class="guide-thumb" href="yazilar/bipolar-uyku-melatonin.html" tabindex="-1" aria-hidden="true"><img src="gorseller/kucuk/bipolar-uyku-melatonin.jpg" width="300" height="300" alt="" loading="lazy"></a>
+        <div class="guide-text">
+          <h3><a class="guide-link" href="yazilar/bipolar-uyku-melatonin.html">Bipolar Bozuklukta Uyku, Melatonin ve Vücut Saati</a></h3>
         <p>Bipolar bozuklukta uyku hastalığın seyrini belirleyen parçalardan biridir; uykusuz bir gece atağı tetikleyebilir, melatonin ise tedavinin yerini tutmaz.</p>
+        </div>
       </li>
       <li>
-        <h3><a class="guide-link" href="yazilar/ginkgo-bellek.html">Ginkgo Biloba ve Yaşa Bağlı Bellek Sorunları</a></h3>
+        <a class="guide-thumb" href="yazilar/ginkgo-bellek.html" tabindex="-1" aria-hidden="true"><img src="gorseller/kucuk/ginkgo-bellek.jpg" width="300" height="300" alt="" loading="lazy"></a>
+        <div class="guide-text">
+          <h3><a class="guide-link" href="yazilar/ginkgo-bellek.html">Ginkgo Biloba ve Yaşa Bağlı Bellek Sorunları</a></h3>
         <p>Ginkgo özütünün unutkanlıkta beklenen yararı ölçülüdür ve yalnızca standart özütler için gösterilmiştir; rafta duran her ginkgo ürünü aynı değildir.</p>
+        </div>
       </li>
       <li>
-        <h3><a class="guide-link" href="yazilar/melatonin-uyku-kalitesi.html">Melatonin Uykuya Gerçekten İyi Geliyor mu?</a></h3>
+        <a class="guide-thumb" href="yazilar/melatonin-uyku-kalitesi.html" tabindex="-1" aria-hidden="true"><img src="gorseller/kucuk/melatonin-uyku-kalitesi.jpg" width="300" height="300" alt="" loading="lazy"></a>
+        <div class="guide-text">
+          <h3><a class="guide-link" href="yazilar/melatonin-uyku-kalitesi.html">Melatonin Uykuya Gerçekten İyi Geliyor mu?</a></h3>
         <p>Yüzlerce çalışmanın toplu değerlendirmesi melatoninin plasebodan iyi olduğunu gösteriyor; ancak yararın ne kadar olduğu, doz ve zamanlamanın nasıl ayarlanacağı hâlâ açık değil.</p>
+        </div>
       </li>
       <li>
-        <h3><a class="guide-link" href="yazilar/kronotip-kanit-haritasi.html">Kronotip ve Ruhsal Hastalıklar: Kanıt Ne Düzeyde?</a></h3>
+        <a class="guide-thumb" href="yazilar/kronotip-kanit-haritasi.html" tabindex="-1" aria-hidden="true"><img src="gorseller/kucuk/kronotip-kanit-haritasi.jpg" width="300" height="300" alt="" loading="lazy"></a>
+        <div class="guide-text">
+          <h3><a class="guide-link" href="yazilar/kronotip-kanit-haritasi.html">Kronotip ve Ruhsal Hastalıklar: Kanıt Ne Düzeyde?</a></h3>
         <p>Akşamcıllık kimi ruhsal sorunlarla güçlü, kimileriyle ise çok zayıf biçimde ilişkilidir; bu ayrımı görmek, hangi bulguya ne kadar güveneceğinizi belirler.</p>
+        </div>
       </li>
       <li>
-        <h3><a class="guide-link" href="yazilar/bas-donmesi-ruh-sagligi.html">Baş Dönmesi ve Ruh Sağlığı</a></h3>
+        <a class="guide-thumb" href="yazilar/bas-donmesi-ruh-sagligi.html" tabindex="-1" aria-hidden="true"><img src="gorseller/kucuk/bas-donmesi-ruh-sagligi.jpg" width="300" height="300" alt="" loading="lazy"></a>
+        <div class="guide-text">
+          <h3><a class="guide-link" href="yazilar/bas-donmesi-ruh-sagligi.html">Baş Dönmesi ve Ruh Sağlığı</a></h3>
         <p>Denge hastalıklarında kaygı ve çökkünlük sıktır; veriler bu kaygının kişilik özelliğinden çok baş dönmesinin belirsizliğine bağlı olduğunu göstermektedir.</p>
+        </div>
       </li>
       <li>
-        <h3><a class="guide-link" href="yazilar/rem-davranis-bozuklugu.html">Rüyaları Yaşamak: REM Uykusu Davranış Bozukluğu</a></h3>
+        <a class="guide-thumb" href="yazilar/rem-davranis-bozuklugu.html" tabindex="-1" aria-hidden="true"><img src="gorseller/kucuk/rem-davranis-bozuklugu.jpg" width="300" height="300" alt="" loading="lazy"></a>
+        <div class="guide-text">
+          <h3><a class="guide-link" href="yazilar/rem-davranis-bozuklugu.html">Rüyaları Yaşamak: REM Uykusu Davranış Bozukluğu</a></h3>
         <p>Uykuda bağırma, savurma ve yataktan fırlama çoğu zaman "kötü rüya" sanılır; oysa yaralanmayı önlemek ve nedenini araştırmak için değerlendirme gerekir.</p>
+        </div>
       </li>
       <li>
-        <h3><a class="guide-link" href="yazilar/mesane-ilaclari-demans.html">Mesane İlaçları Demansa Yol Açar mı?</a></h3>
+        <a class="guide-thumb" href="yazilar/mesane-ilaclari-demans.html" tabindex="-1" aria-hidden="true"><img src="gorseller/kucuk/mesane-ilaclari-demans.jpg" width="300" height="300" alt="" loading="lazy"></a>
+        <div class="guide-text">
+          <h3><a class="guide-link" href="yazilar/mesane-ilaclari-demans.html">Mesane İlaçları Demansa Yol Açar mı?</a></h3>
         <p>Bu ilaçların demansa yol açtığı doğrulanmış değildir; asıl önerilen, ileri yaşta antikolinerjik ilaç yükünü azaltmak ve tedaviyi kendi başına kesmemektir.</p>
+        </div>
       </li>
       <li>
-        <h3><a class="guide-link" href="yazilar/dogum-telkin-gucu.html">Doğum Çevresinde Sözlerin Gücü</a></h3>
+        <a class="guide-thumb" href="yazilar/dogum-telkin-gucu.html" tabindex="-1" aria-hidden="true"><img src="gorseller/kucuk/dogum-telkin-gucu.jpg" width="300" height="300" alt="" loading="lazy"></a>
+        <div class="guide-text">
+          <h3><a class="guide-link" href="yazilar/dogum-telkin-gucu.html">Doğum Çevresinde Sözlerin Gücü</a></h3>
         <p>Gebelik ve doğum döneminde sözler alışıldığından derine iner; telkin dilinin birkaç basit kuralı hem anne adayına hem çevresindekilere yol gösterir.</p>
+        </div>
       </li>
       <li>
-        <h3><a class="guide-link" href="yazilar/fibromiyalji.html">Fibromiyalji: Bilinenler ve Yaşananlar</a></h3>
+        <a class="guide-thumb" href="yazilar/fibromiyalji.html" tabindex="-1" aria-hidden="true"><img src="gorseller/kucuk/fibromiyalji.jpg" width="300" height="300" alt="" loading="lazy"></a>
+        <div class="guide-text">
+          <h3><a class="guide-link" href="yazilar/fibromiyalji.html">Fibromiyalji: Bilinenler ve Yaşananlar</a></h3>
         <p>Tahlillerin normal çıkması ağrının gerçek olmadığı anlamına gelmez; bu yazı hem hastalığın bilinen yönünü hem de hastaların anlattığı deneyimi bir arada ele alıyor.</p>
+        </div>
       </li>
       <li>
-        <h3><a class="guide-link" href="yazilar/noropsikolojik-degerlendirme.html">Nöropsikolojik Değerlendirme Nedir?</a></h3>
+        <a class="guide-thumb" href="yazilar/noropsikolojik-degerlendirme.html" tabindex="-1" aria-hidden="true"><img src="gorseller/kucuk/noropsikolojik-degerlendirme.jpg" width="300" height="300" alt="" loading="lazy"></a>
+        <div class="guide-text">
+          <h3><a class="guide-link" href="yazilar/noropsikolojik-degerlendirme.html">Nöropsikolojik Değerlendirme Nedir?</a></h3>
         <p>Unutkanlık ya da dikkat yakınması için istenen bu inceleme bir sınav değildir; hangi soruları yanıtladığını ve sonuçların nasıl okunduğunu bilmek kaygıyı azaltır.</p>
+        </div>
       </li>
       <li>
-        <h3><a class="guide-link" href="yazilar/uykusuzluk-bdt.html">Uykusuzlukta İlk Seçenek İlaç Değil</a></h3>
+        <a class="guide-thumb" href="yazilar/uykusuzluk-bdt.html" tabindex="-1" aria-hidden="true"><img src="gorseller/kucuk/uykusuzluk-bdt.jpg" width="300" height="300" alt="" loading="lazy"></a>
+        <div class="guide-text">
+          <h3><a class="guide-link" href="yazilar/uykusuzluk-bdt.html">Uykusuzlukta İlk Seçenek İlaç Değil</a></h3>
         <p>Süregelen uykusuzlukta kılavuzların ilk sırada önerdiği tedavi bilişsel davranışçı terapidir; uykusuzluğu başlatan değil, onu sürdüren halkayı hedef alır.</p>
+        </div>
       </li>
     </ul>
     <p class="disclaimer">Bu sayfadaki bilgiler yalnızca genel bilgilendirme amaçlıdır; tanı ve tedavi yerine geçmez. Şikayetleriniz için mutlaka bir sağlık kuruluşuna başvurunuz.</p>
