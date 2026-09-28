@@ -268,9 +268,10 @@
 
   /* ---------- Contact ---------- */
   .contact-list{ list-style:none; margin:0; padding:0; max-width:var(--measure); }
-  .contact-list li{ padding:0.7rem 0; border-top:1px solid var(--line); font-size:0.95rem; }
+  .contact-list li{ padding:0.7rem 0; border-top:1px solid var(--line); font-size:0.95rem;
+                    display:flex; align-items:baseline; }
   .contact-list li:first-child{ border-top:none; }
-  .contact-list .label{ display:inline-block; width:9rem; color:var(--ink-soft); font-size:0.85rem; }
+  .contact-list .label{ flex:none; width:9rem; color:var(--ink-soft); font-size:0.85rem; }
 
   footer{ padding:2rem; font-size:0.8rem; color:var(--ink-soft); max-width:820px; margin:0 auto; }
 
@@ -284,6 +285,7 @@
     .hero{ padding-top:2.5rem; }
     .hero h1{ font-size:2rem; }
     .timeline li{ grid-template-columns:5.5rem 1fr; }
+    .contact-list li{ display:block; }
     .contact-list .label{
       display:block; width:auto; margin-bottom:0.15rem;
       font-size:0.78rem; letter-spacing:0.06em; text-transform:uppercase;
